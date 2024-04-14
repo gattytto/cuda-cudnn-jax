@@ -5,6 +5,6 @@ RUN apt update && apt install -y \
                   python3.10 && \
     curl -sSL https://install.python-poetry.org | python3 - && \
     export PATH="/root/.local/bin:$PATH" && \
-    git clone https://github.com/google-deepmind/recurrentgemma.git && cd recurrentgemma && poetry install .[jax] && cd .. && rm -rf recurrentgemma && \
+    git clone https://github.com/google-deepmind/recurrentgemma.git && cd recurrentgemma && poetry install -E jax && cd .. && rm -rf recurrentgemma && \
     pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
     
