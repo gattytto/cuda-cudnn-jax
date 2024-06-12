@@ -8,7 +8,8 @@ RUN apt update && apt install -y \
     pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && \
     pip install ml-dtypes==0.4.0 && \
     pip install tensorflow-hub && \
-    pip install tensorflow-cpu==2.8 && \
+    pip install tensorflow==2.16.1 && \
+    pip install tensorflow-cpu==2.16.1 && \
     pip install keras-nlp && \
     pip install keras>=3
     
