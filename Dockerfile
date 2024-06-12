@@ -7,5 +7,9 @@ RUN apt update && apt install -y \
     export PATH="/root/.local/bin:$PATH" && \
     git clone https://github.com/google-deepmind/recurrentgemma.git && cd recurrentgemma && poetry install -E jax && pip install .[jax] && cd .. && rm -rf recurrentgemma && \
     pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && \
-    pip install keras-nlp tensorflow-hub tensorflow-cpu keras
+    pip install ml-dtypes==0.4.0 && \
+    pip install tensorflow-hub==2.8 &&  \
+    pip install tensorflow-cpu==2.8 && \
+    pip install keras-nlp && \
+    pip install keras>=3
     
