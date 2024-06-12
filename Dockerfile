@@ -8,7 +8,7 @@ RUN apt update && apt install -y \
     poetry install -E jax && \
     pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && \
     pip install ml-dtypes==0.4.0 && \
-    pip install tensorflow-hub==2.8 && \
+    pip install tensorflow-hub && \
     pip install tensorflow-cpu==2.8 && \
     pip install keras-nlp && \
     pip install keras>=3
