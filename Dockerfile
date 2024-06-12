@@ -5,7 +5,7 @@ RUN apt update && apt install -y \
                   python3.10 && \
     curl -sSL https://install.python-poetry.org | python3 - && \
     export PATH="/root/.local/bin:$PATH" && \
-    poetry install -E jax && \
+    poetry install --no-root -E jax && \
     pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && \
     pip install ml-dtypes==0.4.0 && \
     pip install tensorflow-hub && \
