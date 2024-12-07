@@ -1,4 +1,4 @@
-FROM docker.io/nvidia/cuda:12.5.1-runtime-ubuntu22.04 as base
+FROM docker.io/nvidia/cuda:12.5.0-runtime-ubuntu22.04 as base
 RUN apt update && apt install -y \
                   curl wget git \
                   python3-pip \
