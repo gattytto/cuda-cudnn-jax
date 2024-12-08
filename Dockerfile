@@ -6,11 +6,11 @@ RUN apt update && apt install -y \
     pip install --force-reinstall --upgrade pip --ignore-installed && \
     curl -sSL https://install.python-poetry.org | python3 - && \
     export PATH="/root/.local/bin:$PATH" && \
-    pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
-RUN pip install ml-dtypes==0.4.0 \
+    pip install --upgrade ml-dtypes==0.4.0 \
                 tensorflow-hub \
                 "tensorflow[and-cuda]" \
+                "jax[cuda12_pip]" \
                 keras-nlp \
-                keras>=3
-RUN pip list
+                keras>=3 \
+                --extra-index-url https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
     
