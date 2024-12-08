@@ -3,7 +3,7 @@ RUN apt update && apt install -y \
                   curl wget git \
                   python3-pip \
                   python3 && \
-    pip install --upgrade pip && \
+    pip install --break-system-packages --upgrade pip && \
     curl -sSL https://install.python-poetry.org | python3 - && \
     export PATH="/root/.local/bin:$PATH" && \
     pip install --break-system-packages --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && \
