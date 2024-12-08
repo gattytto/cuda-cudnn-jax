@@ -10,5 +10,6 @@ RUN apt update && apt install -y \
                 tensorflow-hub \
                 tensorflow[and-cuda] \
                 keras-nlp \
-                keras>=3
+                keras>=3 && \
+    pip list
     
