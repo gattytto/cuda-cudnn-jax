@@ -14,4 +14,5 @@ RUN apt update && apt install -y \
                 keras>=3 \
                 jupyterlab>=4 \
                 --extra-index-url https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+USER 1000
     
