@@ -1,1 +1,8 @@
 pandas>=2.2.3
+ml-dtypes==0.4.0
+tensorflow-hub
+"tensorflow[and-cuda]"
+"jax[cuda12_pip]"
+keras-nlp
+keras>=3
+jupyterlab>=4
