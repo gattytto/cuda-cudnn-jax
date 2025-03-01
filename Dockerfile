@@ -5,7 +5,7 @@ RUN apt update && \
         wget \
         curl \
         git \
-        cmake
+        cmake \
         python3-pip \
         python3-venv \
         python3 && \
