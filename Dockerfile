@@ -2,6 +2,7 @@ FROM docker.io/nvidia/cuda:12.4.0-runtime-ubuntu22.04 as base
 
 RUN apt update && \
     apt install -y \
+        go \
         unzip \
         wget \
         curl \
@@ -10,6 +11,7 @@ RUN apt update && \
         python3-pip \
         python3-venv \
         python3 && \
+    go get github.com/gopherdata/gophernotes && \
     curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.6.0 sh && \
     pip install --force-reinstall --upgrade pip --ignore-installed && \
     curl -sSL https://install.python-poetry.org | python3 -
