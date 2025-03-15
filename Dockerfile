@@ -11,7 +11,6 @@ RUN apt update && \
         python3-pip \
         python3-venv \
         python3 && \
-    go install github.com/gopherdata/gophernotes@latest && \
     curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.6.0 sh && \
     pip install --force-reinstall --upgrade pip --ignore-installed && \
     curl -sSL https://install.python-poetry.org | python3 -
