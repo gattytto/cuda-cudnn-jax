@@ -11,7 +11,7 @@ RUN apt update && \
         python3-pip \
         python3-venv \
         python3 && \
-        java-21-openjdk && \
+        java-21-openjdk \
     curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.6.7 sh && \
     pip install --force-reinstall --upgrade pip --ignore-installed && \
     curl -sSL https://install.python-poetry.org | python3 -
