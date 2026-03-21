@@ -6,3 +6,4 @@ jax[cuda12_pip]
 keras-nlp
 keras>=3
 jupyterlab>=4
+tensorboard
