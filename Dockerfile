@@ -1,4 +1,4 @@
-FROM docker.io/nvidia/cuda:12.4.0-runtime-ubuntu22.04 as base
+FROM docker.io/nvidia/cuda:13.0.0-runtime-ubuntu24.04 as base
 
 RUN apt update && \
     apt install -y \
@@ -12,7 +12,7 @@ RUN apt update && \
         python3-venv \
         python3 \
         openjdk-21-jre && \
-    curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.12.3 sh && \
+    curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.20.0 sh && \
     pip install --force-reinstall --upgrade pip --ignore-installed && \
     curl -sSL https://install.python-poetry.org | python3 -
 ENV OLLAMA_MODELS=/storage
