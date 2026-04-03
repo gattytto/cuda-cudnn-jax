@@ -3,6 +3,7 @@ FROM docker.io/nvidia/cuda:13.0.0-runtime-ubuntu24.04 as base
 RUN apt update && \
     apt install -y \
         golang \
+        zstd \
         unzip \
         wget \
         curl \
